@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--th:text 设置div里面的文本内容-->
+<div th:text="${hello}">这是显示欢迎信息</div>
+<div th:utext="${hello}">这是显示欢迎信息</div>
+<table>
+    <tr>
+        <th>NAME</th>
+    </tr>
+    <tr th:each="user,iterStat  : ${users}">
+        <td th:text="${user}+''+${iterStat.index}">xujin</td>
+    </tr>
+</table>
+<p>The message is [[${hello}]]</p>
+<p>The message is [(${hello})]</p>
+</body>
+</html>
